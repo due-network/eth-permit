@@ -3,6 +3,7 @@ const randomId = () => Math.floor(Math.random() * 10000000000);
 export const send = (provider: any, method: string, params?: any[]) => new Promise<any>((resolve, reject) => {
   const payload = {
     id: randomId(),
+    jsonrpc: '2.0',
     method,
     params,
   };
